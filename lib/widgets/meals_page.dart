@@ -22,7 +22,9 @@ class MealsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final category = dummyCategories[categoryId]!; 
-    final filteredMeals = Provider.of<FilteredMealsNotifier>(context).filteredMeals;
+    final filteredMeals = 
+        Provider.of<FilteredMealsNotifier>(context)
+            .filteredMeals;
     final meals = filteredMeals
         .where((meal) => meal.categories.contains(category.id))
         .toList();

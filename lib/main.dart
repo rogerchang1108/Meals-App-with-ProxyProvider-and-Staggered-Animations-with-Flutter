@@ -29,11 +29,11 @@ void main() {
             create: (_) => FavoriteMealsNotifier()),
         ChangeNotifierProvider<FiltersNotifier>(
             create: (_) => FiltersNotifier()),
-        ChangeNotifierProxyProvider2<List<Meal>, FiltersNotifier, FilteredMealsNotifier>(
-            create: (_) => FilteredMealsNotifier([]),
+        ChangeNotifierProxyProvider2<List<Meal>, FiltersNotifier,FilteredMealsNotifier>(
+            create: (_) => FilteredMealsNotifier(),
             update: (_, allMeals, filtersNotifier, previousNotifier) => 
-              (previousNotifier?..update(allMeals, filtersNotifier.filters)) 
-              as FilteredMealsNotifier,
+                previousNotifier!
+                  ..updateFilteredMeals(allMeals, filtersNotifier.filters),
         ),
       ],
       child: const App(),

@@ -4,12 +4,10 @@ import 'package:flutter_app/state/filters_notifier.dart';
 
 class FilteredMealsNotifier with ChangeNotifier {
   List<Meal> _filteredMeals = [];
-
-  FilteredMealsNotifier(List list);
-
   List<Meal> get filteredMeals => _filteredMeals;
   
-  void update(List<Meal> allMeals, Map<Filter, bool> activeFilters){
+  void updateFilteredMeals(
+      List<Meal> allMeals, Map<Filter, bool> activeFilters) {
     _filteredMeals = allMeals.where((meal) {
       if (activeFilters[Filter.glutenFree]! && !meal.isGlutenFree) {
         return false;
