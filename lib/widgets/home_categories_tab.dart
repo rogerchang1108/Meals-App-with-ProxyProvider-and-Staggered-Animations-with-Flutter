@@ -23,7 +23,7 @@ class _HomeCategoriesTabState extends State<HomeCategoriesTab>
 
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 3000),
+      duration: const Duration(milliseconds: 1000),
     );
     _animationController.forward();
   }
