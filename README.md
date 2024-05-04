@@ -30,7 +30,7 @@ In this project, users can access a Meals app with filter and favorite. The app 
 
 - Also, Adding a transformation effect on the star icon when the meal is favorited. 
 
-    ![component](img/2.gif)
+    ![component](img/2_HD.gif)
 
 # Resources
 
